@@ -7,7 +7,6 @@ class AddList extends Component {
       e.preventDefault(); // this prevents the page from reloading -- do not delete this line!
 
       // Implement the rest of this function here!
-      return this.props.addList(document.querySelector('#newID').value);
   }
 
   render() {

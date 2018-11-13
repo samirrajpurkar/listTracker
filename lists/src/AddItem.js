@@ -11,19 +11,8 @@ class AddItem extends Component {
 
   handleSubmit(e) {
       e.preventDefault(); // this prevents the page from reloading -- do not delete this line!
-    
-      // Implement the rest of this function here!
-      let newItem = {}
-      
-      newItem[this.props.idName] = {
-        name: document.querySelector('#newItem').value
-      }
 
-      this.setState(state => ({
-        newItem: newItem
-      }));
-      
-      this.props.addItem(this.state.newItem);
+      // Implement the rest of this function here!
   }
     
 
@@ -35,7 +24,7 @@ class AddItem extends Component {
       <form ref='form' onSubmit={this.handleSubmit.bind(this)}>
       <div id={divName} ref={divName}>
         <label>Name</label><br />
-        <input id="newItem" type='text' ref='id' />
+        <input type='text' ref='id' />
         </div>
         <br />
         <input type='submit' value='Submit' />
